@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="h1One">Play Dice</h1>
+    <section class="dice-section">
+      <h1 class="winner"></h1>
+      <div class="two-score">
+        <p class="score">0</p>
+        <p class="score">0</p>
+      </div>
+    </section>
+    <div class="buttons">
+      <label id="play">Play</label>
+      <label id="reset">Reset</label>
+      <label id="editNames">Edit Names</label>
+    </div>
+
+    <section class="setNames">
+      <h1 class="h1Two">Set Player's Name</h1>
+      <input type="text" id="playerOneName" placeholder="Set player one name" />
+      <br />
+      <input type="text" id="playerTwoName" placeholder="Set player two name" />
+      <br />
+      <input type="submit" id="submitPlayersNames" />
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+/* Animation for showing the set names section */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.setNames {
+  display: none; /* Initially hidden */
+  animation-duration: 0.5s;
+}
+
+.setNames.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+.setNames.slide-out {
+  animation: slideOut 0.5s forwards;
+}
+
+body {
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #6610f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1One {
+  color: #d63384;
+  font-size: 55px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.h1Two {
+  color: #d63384;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.winner {
+  color: #ff0080;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dice-section {
+  width: 80%;
+  max-width: 500px;
+  border: 2px solid white;
+  padding: 15px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  background-color: #8a2be2;
+}
+
+.two-score {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.score {
+  background-color: #d63384;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.buttons label {
+  background-color: #dc3545;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+.setNames {
+  margin-top: 50px;
+}
+#play {
+  background-color: #dc3545;
+  padding: 5px 17px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+}
+#play:hover {
+  border: 2px solid white;
+  transition-duration: 500ms;
+}
+#reset {
+  background-color: #b98b00;
+  padding: 5px 17px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0 20px;
+  color: white;
+}
+#reset:hover {
+  border: 2px solid white;
+  transition-duration: 500ms;
+}
+#editNames {
+  background-color: #6610f2;
+  color: white;
+  padding: 5px 17px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#editNames:hover {
+  text-decoration: underline;
+}
+
+.buttons label:hover {
+  transform: scale(1.05);
+}
+
+#reset {
+  background-color: #b98b00;
+}
+
+#editNames {
+  background-color: #6610f2;
+}
+
+#playerOneName,
+#playerTwoName {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 400px;
+}
+
+#submitPlayersNames {
+  background-color: #dc3545;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 0;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+
+#submitPlayersNames:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .h1One {
+    font-size: 40px;
+  }
+
+  .dice-section {
+    width: 90%;
+  }
+
+  .score {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .buttons label {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1One {
+    font-size: 30px;
+  }
+
+  .winner {
+    font-size: 24px;
+  }
+
+  .dice-section {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .score {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons label {
+    padding: 10px 20px;
+    width: 100px;
+    text-align: center;
+  }
+}
